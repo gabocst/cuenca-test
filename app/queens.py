@@ -49,6 +49,7 @@ class Nqueens:
 			number_of_solutions = x.number_of_solutions
 		if number_of_solutions != -1:
 			print("Number of solutions: ", number_of_solutions)
+			return number_of_solutions
 		else:
 			k = 0
 			board = [0] * self.N
@@ -61,7 +62,7 @@ class Nqueens:
 			print("Number of solutions: ", self.solutions)
 			queen.number_of_solutions = self.solutions
 			session.commit()
-		return True
+		return self.solutions
 
 
 def main():
